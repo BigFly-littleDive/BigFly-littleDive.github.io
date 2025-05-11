@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10393 Lindenberg Observations at 18Z 28 Aug 2024</title>
+  <style>
+    body {
+      background-color: #fefefe;
+      font-family: monospace;
+      color: #000;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #container {
+      display: inline-block;
+      text-align: left;
+      border: 1px solid #aaa;
+      padding: 20px;
+      background-color: #fff;
+      min-height: 200px;
+      width: 500px;
+      white-space: pre;
+      overflow: auto;
+    }
+    button {
+      font-family: monospace;
+      padding: 6px 12px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>10393 Lindenberg Observations at 18Z 28 Aug 2024</h2>
+
+  <button onclick="printAscii()">Print</button>
+
+  <div id="container"></div>
+
+  <script>
+    const asciiArt = [
+      "     /\\_/\\",
+      "    ( o.o )",
+      "     > ^ <    🌼",
+      "     /|  |\\",
+      "    /_|__|_\\",
+      "",
+      "     A little cat with a flower, just for you 💛"
+    ];
+
+    function printAscii() {
+      const container = document.getElementById("container");
+      container.textContent = "";  // clear previous output
+      let i = 0;
+      const interval = setInterval(() => {
+        if (i < asciiArt.length) {
+          container.textContent += asciiArt[i] + "\n";
+          i++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 300); // adjust typing speed here
+    }
+  </script>
+
+</body>
+</html>
